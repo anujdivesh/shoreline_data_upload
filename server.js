@@ -19,11 +19,11 @@ const Role = db.role;
 // db.sequelize.sync();
 // force: true will drop the table if it already exists
 db.sequelize.sync().then(() => {
- // initial();
+  initial();
 });
 
 // simple route
-app.get("/shoreline", (req, res) => {
+app.get("/", (req, res) => {
   res.json({ message: "Welcome to bezkoder application." });
 });
 
