@@ -19,5 +19,5 @@ module.exports = function(app) {
     controller.signup
   );
 
-  app.post("shoreline//api/auth/signin", controller.signin);
+  app.post("shoreline/api/auth/signin", controller.signin);
 };
