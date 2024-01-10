@@ -10,11 +10,11 @@ module.exports = function(app) {
     next();
   });
 
-  app.get("/api/files", controller.getListFiles);
-  app.get("/api/files/:name", controller.download);
+  app.get("/shoreline/api/files", controller.getListFiles);
+  app.get("/shoreline/api/files/:name", controller.download);
 
-  app.post("/api/upload",[authJwt.verifyToken, authJwt.isAdmin],controller.upload);
+  app.post("/shoreline/api/upload",[authJwt.verifyToken, authJwt.isAdmin],controller.upload);
 
-  app.delete("/api/files/:name", [authJwt.verifyToken, authJwt.isAdmin],controller.removeSync);
+  app.delete("/shoreline/api/files/:name", [authJwt.verifyToken, authJwt.isAdmin],controller.removeSync);
 
 };
