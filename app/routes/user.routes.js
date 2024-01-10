@@ -10,22 +10,22 @@ module.exports = function(app) {
     next();
   });
 
-  app.get("/shoreline-api/test/all", controller.allAccess);
+  app.get("/api/test/all", controller.allAccess);
 
   app.get(
-    "/shoreline-api/test/user",
+    "/api/test/user",
     [authJwt.verifyToken],
     controller.userBoard
   );
 
   app.get(
-    "/shoreline-api/test/mod",
+    "/api/test/mod",
     [authJwt.verifyToken, authJwt.isModerator],
     controller.moderatorBoard
   );
 
   app.get(
-    "/shoreline-api/test/admin",
+    "/api/test/admin",
     [authJwt.verifyToken, authJwt.isAdmin],
     controller.adminBoard
   );

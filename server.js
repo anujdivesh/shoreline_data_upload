@@ -23,7 +23,7 @@ db.sequelize.sync().then(() => {
 });
 
 // simple route
-app.get("/", (req, res) => {
+app.get("/shoreline", (req, res) => {
   res.json({ message: "Welcome to bezkoder application." });
 });
 
