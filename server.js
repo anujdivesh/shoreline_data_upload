@@ -31,6 +31,7 @@ app.get("/shoreline", (req, res) => {
 require('./app/routes/auth.routes')(app);
 require('./app/routes/user.routes')(app);
 require('./app/routes/upload.routes')(app);
+require('./app/routes/satellite.routes')(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8086;
